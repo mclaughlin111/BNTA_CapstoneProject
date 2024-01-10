@@ -1,3 +1,5 @@
+![Capstone Ecommerce Marketplace Class Diagram](https://github.com/mclaughlin111/BNTA_CapstoneProject/assets/47330113/04fb9828-aeac-4c62-bdeb-3e7684ba8e1c)
+
 # __🗻CapstoneProject__
 Description: Digital Marketplace, a website that displays a database of products and information about them.
 ## MVP
