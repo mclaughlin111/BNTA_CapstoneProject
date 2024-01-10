@@ -1,4 +1,5 @@
 ![Capstone Ecommerce Marketplace Class Diagram](https://github.com/mclaughlin111/BNTA_CapstoneProject/assets/47330113/04fb9828-aeac-4c62-bdeb-3e7684ba8e1c)
+![Website wireframe](https://github.com/mclaughlin111/BNTA_CapstoneProject/assets/47330113/9fe78911-2efc-4125-9fd1-c05fce415f04)
 
 # __🗻CapstoneProject__
 Description: Digital Marketplace, a website that displays a database of products and information about them.
