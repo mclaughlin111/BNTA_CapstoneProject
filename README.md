@@ -1,19 +1,45 @@
-# _CapstoneProject_
+# __🗻CapstoneProject__
 Description: Digital Marketplace, a website that displays a database of products and information about them.
 ## MVP
-* Application will display available products from database
+* Application will display available products from a database.
+ This includes:
 	* Product Price
-	* Current Product Stock Level
+	* Current Product Stock Level 
 
-* Customer details are stored in a database, which can be added and amended
-* Customers are able to place order & buy products from the database
-* Product stock levels adjust according to customer orders
+* Application will allow filtering of products from the database, by:
+	* Price
+	* Category
+
+* Customers are able to select products and add selection to a basket
+
 * Order information is stored in an additional database
 
 ## Extensions
-* Estimated Delivery Time (to customer based on given location/postcode)
-* Faux STRIPE payment demonstration 
+* Customer details are stored in a database, including: Name, Email, Address and account password 
 
-* Customer can pay a surplus to prioritise delivery
-* Customer can designate items from an order to be delivered to a locker/hub if in person delivery is unsuccessful
-* Customer can check items to include a delivery code (i.e. offered on items above a certain price)
+* After 'checkout' application allows a user to login or create a user account
+* Product components are branded with 'traffic light' availability levels (Green for high, Amber for medium, Red for low, Greyed Out for Out of Stock)
+
+
+* Allow Customers to Rate Products
+* Allow filtering by product rating
+
+
+* If product is out of stock, display restock information
+
+* Customers can checkout and 'Buy' their basket selection
+	* Database updates according to customer orders (stock levels decrease according to orders)
+	* Store customers previous orders in the database
+
+
+* Estimated Delivery Time (to customer based on given location/postcode)
+* Allow Filtering by Delivery Time
+
+
+* Integrate [STRIPE demo payment component ](https://stripe.com/docs/stripe-js/react?locale=en-GB)
+
+**"Delivery Extensions"**
+
+* Customer can select items for priority delivery
+* Customer can select items from to be delivered to a locker/hub if delivery is unsuccessful
+* Customer can select items to require a delivery code (e.g. offered above a certain price)
