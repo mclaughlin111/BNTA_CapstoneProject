@@ -9,7 +9,7 @@ public enum ProductType {
     HOBBIES,
     SUSTAINABILITY;
 
-    
+
 
 }
 
