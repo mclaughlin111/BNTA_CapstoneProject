@@ -9,8 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity(name="orders")
-@Table(name="orders")
+@Table //(name="orders")
 public class Order {
+
+
+    @Transient // attribute created without table heading  // helpful for custom fields
+    private ArrayList<ProductDTO> products;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,16 +31,21 @@ public class Order {
 
     @OneToMany(mappedBy = "order")
     @JsonIgnoreProperties({"orders"})
-    @JsonIgnore
+    @JsonIgnore // ignored in DB to STOP recursion
     List<ProductOrder> productOrders;
 
     public Order(User user, LocalDateTime timeStamp){
         this.user = user;
         this.timeStamp = timeStamp;
-        this.productOrders = new ArrayList<>();
+        this.productOrders = new ArrayList<>(); // needed on backend
     }
 
     public Order() {
+    }
+
+    public ArrayList<ProductDTO> getProducts() {return this.products; }
+    public void setProducts(ArrayList<ProductDTO> products) {
+        this.products = products;
     }
 
     public long getId() {
