@@ -1,1 +1,1 @@
-package com.example.RainforestRetail.services;public class UserService {}
+package com.example.RainforestRetail.services;import com.example.RainforestRetail.models.User;import com.example.RainforestRetail.repositories.UserRepository;import org.springframework.beans.factory.annotation.Autowired;import org.springframework.stereotype.Service;@Servicepublic class UserService {    @Autowired    UserRepository userRepository;    public User createNewUser(User user){        return  userRepository.save(user);    }}
