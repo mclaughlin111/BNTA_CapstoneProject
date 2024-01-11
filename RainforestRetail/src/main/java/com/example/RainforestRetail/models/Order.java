@@ -19,15 +19,15 @@ public class Order {
     @ManyToOne
     @JoinColumn(name= "user_id")
     @JsonIgnoreProperties({"orders"})
-//    @JsonIgnore
+    @JsonIgnore
     private User user;
 
     @Column(name="time_stamp")
     private LocalDateTime timeStamp;
 
     @OneToMany(mappedBy = "order")
-    @JsonIgnoreProperties({"order"})
-//    @JsonIgnore
+    @JsonIgnoreProperties({"orders"})
+    @JsonIgnore
     List<ProductOrder> productOrders;
 
     public Order(User user, LocalDateTime timeStamp){

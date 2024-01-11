@@ -27,7 +27,7 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     @JsonIgnoreProperties({"user"})
-//    @JsonIgnore may have to re-add if we get recursion issues
+//    @JsonIgnore
     private List<Order> orders;
 
     public User(String name, String email, String address){

@@ -1,5 +1,6 @@
 package com.example.RainforestRetail.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
@@ -17,17 +18,19 @@ public class ProductOrder {
     @ManyToOne
     @JoinColumn(name = "product_id")
     @JsonIgnoreProperties({"product_orders"})
+//    @JsonIgnore
     private Product products;
 
     @ManyToOne
     @JoinColumn(name = "order_id")
     @JsonIgnoreProperties({"product_orders"})
+    @JsonIgnore
     private Order order;
 
     public ProductOrder() {
     }
 
-    public ProductOrder(int quantity, Product products, Order order) {
+    public ProductOrder(int quantity,Product products , Order order) {
         this.quantity = quantity;
         this.products = products;
         this.order = order;
