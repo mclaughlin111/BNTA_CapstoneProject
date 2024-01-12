@@ -17,9 +17,13 @@ const handleClickToBasket = (product) => {
     // setBasketItems((list) => {
     //     list.filter((basketCheck) => basketCheck !== item)
     // )
-    setBasketItems((basketItems) => [...basketItems, product])
+    let existingBasketItems = basketItems
+    setBasketItems((existingBasketItems) => [...existingBasketItems, product])
     console.log(product)
+    console.log(basketItems)
 }
+
+
 
 
 useEffect(()=> {

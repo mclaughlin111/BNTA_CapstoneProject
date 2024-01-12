@@ -1,5 +1,5 @@
-const Product = ({product}) => {
-    const handleClickToBasket = () => {
+const Product = ({product , handleClickToBasket}) => {
+    const handleClickOnBasket = () => {
         handleClickToBasket(product.id)
     }
     return ( 
@@ -8,7 +8,7 @@ const Product = ({product}) => {
         <h4>Price : <span>£</span>{product.price}</h4>
         <h4>Description : {product.productInfo}</h4>
         <h4>Category : {product.productType}</h4>
-        <button onClick={handleClickToBasket}>Add to Basket</button>
+        <button onClick={handleClickOnBasket}>Add to Basket</button>
         <hr/>
 
 
