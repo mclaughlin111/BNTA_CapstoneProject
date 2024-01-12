@@ -16,7 +16,7 @@ useEffect(()=> {
 },[])
     return ( 
         <>
-        <ProductList/>
+        <ProductList products={products}/>
         
         </>
      );
