@@ -9,21 +9,21 @@ Description: Digital Marketplace, a website that displays a database of products
 	* Product Price
 	* Current Product Stock Level 
 
-* Application will allow filtering of products from the database, by:
-	* Price
-	* Category
-
-* Customers are able to select products and add selection to a basket
+* Customers are able to select products and add selection to a basket (basket state being stored on front end)
 
 * Order information is stored in an additional table
 
-* Customer details are stored in a table, including: Name, Email, Address and account password 
-* After 'checkout' application allows a user to login or create a user account
+* Customer details are stored in a table, including: Name, Email, Address 
 
 ## Extensions
 
 * Product components are branded with 'traffic light' availability levels (Green for high, Amber for medium, Red for low, Greyed Out for Out of Stock)
+* Application will allow filtering of products from the database, by:
+	* Price
+	* Category
 
+	
+* After 'checkout' application allows a user to login or create a user account
 
 * Allow Customers to Rate Products
 * Allow filtering by product rating
