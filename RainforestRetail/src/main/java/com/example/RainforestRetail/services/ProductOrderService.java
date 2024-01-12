@@ -1,1 +1,1 @@
-package com.example.RainforestRetail.services;public class ProductOrderService {}
+package com.example.RainforestRetail.services;import org.springframework.stereotype.Service;@Servicepublic class ProductOrderService {}
