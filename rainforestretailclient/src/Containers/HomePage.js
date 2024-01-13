@@ -14,13 +14,14 @@ const fetchProducts = async () => {
 }
 
 const handleClickToBasket = (product) => {
-    // setBasketItems((list) => {
-    //     list.filter((basketCheck) => basketCheck !== item)
-    // )
-    let existingBasketItems = basketItems
-    setBasketItems((existingBasketItems) => [...existingBasketItems, product])
-    console.log(product)
-    console.log(basketItems)
+    // setBasketItems((basketItems) => [...basketItems, product])
+    setBasketItems((prevBasketItems) => {
+        const newBasketItems = [...prevBasketItems, product];
+        console.log(newBasketItems); // Updated basketItems
+        return newBasketItems;
+    });
+
+
 }
 
 
@@ -28,14 +29,14 @@ const handleClickToBasket = (product) => {
 
 useEffect(()=> {
     fetchProducts();
-    handleClickToBasket();
 },[])
 
 
     return ( 
         <>
+         <Basket basketItems={basketItems}/>
         <ProductList products={products} handleClickToBasket={handleClickToBasket}/>
-        <Basket/>
+       
         </>
      );
 }
