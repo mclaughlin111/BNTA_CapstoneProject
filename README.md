@@ -13,11 +13,15 @@ Description: Digital Marketplace, a website that displays a database of products
 
 * Customers are able to select products and add selection to a basket (basket state being stored on front end)
 
-* Order information is stored in an additional table
+* Confirmed order information is stored in the database
 
-* Customer details are stored in a table, including: Name, Email, Address 
+* Customer details are stored in a table, including: Name, Email, Address
+
 
 ## Extensions
+* Users can create new 'customer profiles' through the front end
+
+* Order information is relayed to customer Email with description of products and quantity
 
 * Product components are branded with 'traffic light' availability levels (Green for high, Amber for medium, Red for low, Greyed Out for Out of Stock)
 * Application will allow filtering of products from the database, by:
