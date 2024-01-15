@@ -1,16 +1,5 @@
 const Basket = ({ basketItems, products, basket }) => {
 
-    // Needless Function for returning individualised <BasketItem> components under basket
-//   const basketItemsAdded = basketItems.map((item) => {
-//     return (
-//       <BasketItem
-//         key={item}
-//         item={item}
-//         products={products}
-    
-//       />
-//     );
-//   });
 
   const productsWithQuantity = (basket) => {
     return (  
@@ -20,14 +9,14 @@ const Basket = ({ basketItems, products, basket }) => {
         
         {Object.entries(basket).map(([idItem, val], id) => (
           <li key={id}>
-            {products[idItem].name} : {val}
+            {products[idItem-1].name} : {val}
           </li>
         ))}
       </ul>
       )
   
   };
-
+ 
   return (
     <>
      
