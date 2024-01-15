@@ -79,4 +79,8 @@ public class Order {
     public void setProductOrders(List<ProductOrder> productOrders) {
         this.productOrders = productOrders;
     }
+
+    public void addToProductOrdersList(ProductOrder productOrder) {
+        productOrders.add(productOrder);
+    }
 }

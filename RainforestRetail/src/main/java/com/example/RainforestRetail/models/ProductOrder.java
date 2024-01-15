@@ -36,6 +36,9 @@ public class ProductOrder {
         this.order = order;
     }
 
+    public ProductOrder(int quantity, Product product) {
+    }
+
     public long getId() {
         return id;
     }
