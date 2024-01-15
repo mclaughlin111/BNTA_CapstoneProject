@@ -1,4 +1,5 @@
 import Basket from "../Components/Basket";
+import CheckoutForm from "../Components/CheckoutForm";
 import ProductList from "../Components/ProductList";
 import { useState, useEffect } from "react";
 const HomePage = () => {
@@ -32,6 +33,8 @@ const HomePage = () => {
 
   };
 
+  
+
   useEffect(() => {
     fetchProducts().finally(() => setLoading(false)); // load function on fetchProducts
   }, []);
@@ -46,7 +49,9 @@ const HomePage = () => {
           products={products}
           handleClickToBasket={handleClickToBasket}
         />
+      
       )}
+        <CheckoutForm/>
     </>
   );
 };

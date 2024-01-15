@@ -1,4 +1,4 @@
-const Basket = ({ basketItems, products, basket }) => {
+const Basket = ({ basketItems, products, basket}) => {
 
 
   const productsWithQuantity = (basket) => {
@@ -24,6 +24,7 @@ const Basket = ({ basketItems, products, basket }) => {
         Basket<span className="basketTotal">{basketItems.length}</span>
       </h2>
       {productsWithQuantity(basket)}
+      <button>Go To Checkout</button>
     </>
   );
 };

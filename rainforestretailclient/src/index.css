@@ -18,3 +18,9 @@ code {
   vertical-align: top;
   content: "+";
 }
+
+article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
