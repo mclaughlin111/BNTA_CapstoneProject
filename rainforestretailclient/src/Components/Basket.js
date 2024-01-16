@@ -1,3 +1,5 @@
+import { Navigate, useNavigate } from "react-router-dom";
+
 const Basket = ({ basketItems, products, basket}) => {
 
 
@@ -16,6 +18,12 @@ const Basket = ({ basketItems, products, basket}) => {
       )
   
   };
+
+  const navigate = useNavigate();
+
+  const handleClick = (event) => {
+    navigate("/checkout");
+  }
  
   return (
     <>
@@ -24,7 +32,7 @@ const Basket = ({ basketItems, products, basket}) => {
         Basket<span className="basketTotal">{basketItems.length}</span>
       </h2>
       {productsWithQuantity(basket)}
-      <button>Go To Checkout</button>
+      <button onClick={handleClick}>Go To Checkout</button>
     </>
   );
 };
