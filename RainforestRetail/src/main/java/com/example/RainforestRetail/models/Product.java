@@ -3,6 +3,7 @@ package com.example.RainforestRetail.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import org.hibernate.Length;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,7 @@ public class Product {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "product_info")
+    @Column(name = "product_info", length = 1000)
     private String productInfo;
 
     @Enumerated(EnumType.STRING)
