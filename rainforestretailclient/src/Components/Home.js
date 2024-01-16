@@ -1,7 +1,7 @@
 import {Link, Outlet} from "react-router-dom";
 import ProductList from "./ProductList";
 
-const Home = ({products, handleClickToBasket}) => {
+const Home = () => {
 
 
 

@@ -46,8 +46,7 @@ const HomePage = () => {
     {
         path: "/",
         element: <Home 
-        products={products}
-        handleClickToBasket={handleClickToBasket}/>,
+        />,
         children: [
             {
                 path: "/basket",
