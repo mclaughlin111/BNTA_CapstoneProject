@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity(name="users")
+@Entity(name = "users")
 @Table // (name = "users") //May have to take name="users" away from line 7/8
 public class User {
 
@@ -16,21 +16,20 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name="name")
+    @Column(name = "name")
     private String name;
 
-    @Column(name="email")
+    @Column(name = "email")
     private String email;
 
-    @Column(name="address")
+    @Column(name = "address")
     private String address;
 
     @OneToMany(mappedBy = "user")
     @JsonIgnoreProperties({"users"})
-//    @JsonIgnore
     private List<Order> orders;
 
-    public User(String name, String email, String address){
+    public User(String name, String email, String address) {
         this.name = name;
         this.email = email;
         this.address = address;

@@ -10,10 +10,4 @@ public enum ProductType {
     SUSTAINABILITY;
 
 
-
 }
-
-//enum Homegoods {
-//    MUGS,
-//
-//}

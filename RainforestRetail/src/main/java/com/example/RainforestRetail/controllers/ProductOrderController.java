@@ -21,11 +21,4 @@ public class ProductOrderController {
     @Autowired
     OrderService orderService;
 
-//    @PostMapping //check restful routes, specifically @PathVariable being used in a PostMapping
-//    public ResponseEntity<Order> createProductOrder (@RequestBody HashMap<Long , Integer> basket, @PathVariable long userId) {
-//
-//        ProductOrder productOrder = productOrderService.
-//                return new ResponseEntity<>(order, HttpStatus.CREATED);
-//    }
-
 }

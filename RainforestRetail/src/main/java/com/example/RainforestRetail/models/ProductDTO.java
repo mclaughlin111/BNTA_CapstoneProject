@@ -7,6 +7,7 @@ public class ProductDTO {
     private ProductType productType;
     private double price;
     private int quantity;
+
     public ProductDTO() {
     }
 
