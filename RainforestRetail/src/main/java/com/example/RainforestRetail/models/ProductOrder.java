@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity(name = "product_orders")
-@Table // (name = "product_orders")
+@Table
 public class ProductOrder {
 
     @Id
@@ -18,7 +18,6 @@ public class ProductOrder {
     @ManyToOne
     @JoinColumn(name = "product_id")
     @JsonIgnoreProperties({"product_orders"})
-//    @JsonIgnore
     private Product products;
 
     @ManyToOne
@@ -30,7 +29,7 @@ public class ProductOrder {
     public ProductOrder() {
     }
 
-    public ProductOrder(int quantity,Product products , Order order) {
+    public ProductOrder(int quantity, Product products, Order order) {
         this.quantity = quantity;
         this.products = products;
         this.order = order;

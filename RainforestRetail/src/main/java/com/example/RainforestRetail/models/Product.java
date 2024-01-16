@@ -3,12 +3,13 @@ package com.example.RainforestRetail.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import org.hibernate.Length;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity(name = "products")
-@Table // (name = "products")
+@Table
 public class Product {
 
     @Id
@@ -18,7 +19,7 @@ public class Product {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "product_info")
+    @Column(name = "product_info", length = 1000)
     private String productInfo;
 
     @Enumerated(EnumType.STRING)
@@ -39,12 +40,13 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name, ProductType productType, double price, int stock) {
+    public Product(String name, ProductType productType, double price, int stock, String productInfo) {
         this.name = name;
         this.productType = productType;
         this.price = price;
         this.stock = stock;
         this.productOrders = new ArrayList<>();
+        this.productInfo = productInfo;
     }
 
     public long getId() {

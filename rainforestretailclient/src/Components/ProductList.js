@@ -8,7 +8,7 @@ const ProductList = ({products, handleClickToBasket}) => {
 
     return (
         <div>
-         <h2>List Of Products </h2>
+         <h2>List Of Products</h2>
          {productData}
          </div>
 

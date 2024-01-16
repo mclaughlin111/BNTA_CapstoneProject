@@ -8,12 +8,13 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity(name="orders")
-@Table //(name="orders")
+@Entity(name = "orders")
+@Table
 public class Order {
 
 
-    @Transient // attribute created without table heading  // helpful for custom fields
+    @Transient // transient ignores table heading in db - helpful for custom fields
+    @JsonIgnore
     private ArrayList<ProductDTO> products;
 
     @Id
@@ -21,12 +22,12 @@ public class Order {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name= "user_id")
+    @JoinColumn(name = "user_id")
     @JsonIgnoreProperties({"orders"})
     @JsonIgnore
     private User user;
 
-    @Column(name="time_stamp")
+    @Column(name = "time_stamp")
     private LocalDateTime timeStamp;
 
     @OneToMany(mappedBy = "order")
@@ -34,7 +35,7 @@ public class Order {
     @JsonIgnore // ignored in DB to STOP recursion
     List<ProductOrder> productOrders;
 
-    public Order(User user, LocalDateTime timeStamp){
+    public Order(User user, LocalDateTime timeStamp) {
         this.user = user;
         this.timeStamp = timeStamp;
         this.productOrders = new ArrayList<>(); // needed on backend
@@ -43,7 +44,10 @@ public class Order {
     public Order() {
     }
 
-    public ArrayList<ProductDTO> getProducts() {return this.products; }
+    public ArrayList<ProductDTO> getProducts() {
+        return this.products;
+    }
+
     public void setProducts(ArrayList<ProductDTO> products) {
         this.products = products;
     }
@@ -78,5 +82,9 @@ public class Order {
 
     public void setProductOrders(List<ProductOrder> productOrders) {
         this.productOrders = productOrders;
+    }
+
+    public void addToProductOrdersList(ProductOrder productOrder) {
+        productOrders.add(productOrder);
     }
 }
