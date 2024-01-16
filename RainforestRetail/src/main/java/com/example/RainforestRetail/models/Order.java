@@ -32,7 +32,7 @@ public class Order {
 
     @OneToMany(mappedBy = "order")
     @JsonIgnoreProperties({"orders"})
-    @JsonIgnore // ignored in DB to STOP recursion
+//    @JsonIgnore // ignored in DB to STOP recursion
     List<ProductOrder> productOrders;
 
     public Order(User user, LocalDateTime timeStamp) {
