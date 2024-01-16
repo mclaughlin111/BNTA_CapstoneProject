@@ -45,7 +45,9 @@ const HomePage = () => {
   const rainforestRoutes = createBrowserRouter([
     {
         path: "/",
-        element: <Home />,
+        element: <Home 
+        products={products}
+        handleClickToBasket={handleClickToBasket}/>,
         children: [
             {
                 path: "/basket",
@@ -59,7 +61,15 @@ const HomePage = () => {
             {
                 path: "/checkout",
                 element: <CheckoutForm/>
+            },
+            {
+              path:"/",
+              element: <ProductList
+              products={products}
+              handleClickToBasket={handleClickToBasket}
+              />  
             }
+            
         ]
     }
 ]);
@@ -67,11 +77,6 @@ const HomePage = () => {
   return (
     <>
       <RouterProvider router = {rainforestRoutes} />
-
-      <ProductList
-          products={products}
-          handleClickToBasket={handleClickToBasket}
-      />
 
     </>
   );
