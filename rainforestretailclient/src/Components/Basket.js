@@ -3,13 +3,13 @@ const Basket = ({ basketItems, products, basket}) => {
 
   const productsWithQuantity = (basket) => {
     return (  
-        //function maps over Javascript Object List, and returns products ID & Quantity from handleClickToBasket function
-        // idItem: item ID, val: quantity
+        //function maps over hashmap, and returns products ID & Quantity from handleClickToBasket function
+        // idItem: item ID, quant: quantity
     <ul>
         
-        {Object.entries(basket).map(([idItem, val], id) => (
+        {Object.entries(basket).map(([idItem, quant], id) => (
           <li key={id}>
-            {products[idItem-1].name} : {val}
+            {products[idItem-1].name} : {quant}
           </li>
         ))}
       </ul>
