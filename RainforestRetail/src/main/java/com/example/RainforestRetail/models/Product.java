@@ -39,12 +39,13 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name, ProductType productType, double price, int stock) {
+    public Product(String name, ProductType productType, double price, int stock, String productInfo) {
         this.name = name;
         this.productType = productType;
         this.price = price;
         this.stock = stock;
         this.productOrders = new ArrayList<>();
+        this.productInfo = productInfo;
     }
 
     public long getId() {
