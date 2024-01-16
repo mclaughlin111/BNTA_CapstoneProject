@@ -1,6 +1,7 @@
 import { useState } from "react"; 
+import { Link } from "react-router-dom";
 
-const CheckoutForm = ({fetchEmail}) => {
+const CheckoutForm = ({fetchEmail, createNewOrder}) => {
   //Function to handle checkout
   // const handleCheckOut = () => {
   //     return null;
@@ -19,6 +20,11 @@ const CheckoutForm = ({fetchEmail}) => {
     fetchEmail(stateEmail);
     setStateEmail("");
   }
+
+  const handleClick = (event) => {
+    createNewOrder();
+  }
+
 
   
   return (
@@ -53,7 +59,7 @@ const CheckoutForm = ({fetchEmail}) => {
         <input type="submit" value="Submit"/>   
       </form>
 
-      <button>Buy Now</button>
+      <Link to="/completed-order"><button onClick={handleClick}>Buy Now</button></Link>
     </>
   );
 };

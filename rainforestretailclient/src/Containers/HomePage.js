@@ -4,13 +4,15 @@ import ProductList from "../Components/ProductList";
 import { useState, useEffect } from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from "../Components/Home";
+import CompletedOrder from "../Components/CompletedOrder";
 
 const HomePage = () => {
   const [products, setProducts] = useState([]); // state for products from backend
   const [basketItems, setBasketItems] = useState([]); // state for basket on frontend
   const [basket, setBasket] = useState({}); // state for basket on frontend
   const [loading, setLoading] = useState(true); // state for loading function
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState({});
+  const [order, setOrder] = useState({});
   
 
   //FETCH Products
@@ -21,12 +23,22 @@ const HomePage = () => {
   };
 
   const fetchEmail = async (enteredEmail) => {
-    console.log(enteredEmail);
+    
     const response = await fetch(`http://localhost:8080/users?email=${enteredEmail}`)
     const data = await response.json();
     setUser(data);
   }
 
+  const createNewOrder = async () => {
+    const response = await fetch(`http://localhost:8080/orders?userId=${user.id}`,{
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify(basket)
+    })
+    const order = await response.json();
+    console.log(order);
+    setOrder(order);
+  }
   
 
   //Function Adds User selected products to basket
@@ -71,7 +83,8 @@ const HomePage = () => {
             {
                 path: "/checkout",
                 element: <CheckoutForm
-                fetchEmail={fetchEmail}/>
+                fetchEmail={fetchEmail}
+                createNewOrder={createNewOrder}/>
             },
             {
               path:"/",
@@ -79,6 +92,13 @@ const HomePage = () => {
               products={products}
               handleClickToBasket={handleClickToBasket}
               />  
+            },
+            {
+              path:"/completed-order",
+              element: <CompletedOrder
+              order={order}
+              />
+              
             }
             
         ]
