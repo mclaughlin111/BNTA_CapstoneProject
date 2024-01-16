@@ -13,7 +13,8 @@ import java.util.List;
 public class Order {
 
 
-    @Transient // attribute created without table heading  // helpful for custom fields
+    @Transient
+    @JsonIgnore// attribute created without table heading  // helpful for custom fields
     private ArrayList<ProductDTO> products;
 
     @Id
