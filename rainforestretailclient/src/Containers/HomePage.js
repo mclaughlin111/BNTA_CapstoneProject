@@ -10,6 +10,8 @@ const HomePage = () => {
   const [basketItems, setBasketItems] = useState([]); // state for basket on frontend
   const [basket, setBasket] = useState({}); // state for basket on frontend
   const [loading, setLoading] = useState(true); // state for loading function
+  const [user, setUser] = useState({})
+  
 
   //FETCH Products
   const fetchProducts = async () => {
@@ -17,6 +19,15 @@ const HomePage = () => {
     const data = await response.json();
     setProducts(data);
   };
+
+  const fetchEmail = async (enteredEmail) => {
+    console.log(enteredEmail);
+    const response = await fetch(`http://localhost:8080/users?email=${enteredEmail}`)
+    const data = await response.json();
+    setUser(data);
+  }
+
+  
 
   //Function Adds User selected products to basket
   const handleClickToBasket = (product) => {
@@ -59,7 +70,8 @@ const HomePage = () => {
             },
             {
                 path: "/checkout",
-                element: <CheckoutForm/>
+                element: <CheckoutForm
+                fetchEmail={fetchEmail}/>
             },
             {
               path:"/",
