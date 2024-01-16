@@ -2,6 +2,9 @@ import Basket from "../Components/Basket";
 import CheckoutForm from "../Components/CheckoutForm";
 import ProductList from "../Components/ProductList";
 import { useState, useEffect } from "react";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import Home from "../Components/Home";
+
 const HomePage = () => {
   const [products, setProducts] = useState([]); // state for products from backend
   const [basketItems, setBasketItems] = useState([]); // state for basket on frontend
@@ -39,19 +42,37 @@ const HomePage = () => {
     fetchProducts().finally(() => setLoading(false)); // load function on fetchProducts
   }, []);
 
+  const rainforestRoutes = createBrowserRouter([
+    {
+        path: "/",
+        element: <Home />,
+        children: [
+            {
+                path: "/basket",
+                element:  <Basket 
+                products={products} 
+                basketItems={basketItems} 
+                basket={basket}/>
+               
+      
+            },
+            {
+                path: "/checkout",
+                element: <CheckoutForm/>
+            }
+        ]
+    }
+]);
+
   return (
     <>
-      <Basket products={products} basketItems={basketItems} basket={basket}/>
-      {loading ? (
-        <p>Loading Products...</p> // shows as API fetch request is carried out
-      ) : (
-        <ProductList
+      <RouterProvider router = {rainforestRoutes} />
+
+      <ProductList
           products={products}
           handleClickToBasket={handleClickToBasket}
-        />
-      
-      )}
-        <CheckoutForm/>
+      />
+
     </>
   );
 };
