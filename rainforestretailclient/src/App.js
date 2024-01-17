@@ -1,11 +1,12 @@
-import logo from './logo.svg';
-import HomePage from './Containers/HomePage';
-import './App.css';
+import HomePage from "./Containers/HomePage";
+import { NextUIProvider } from "@nextui-org/react"; // NEXT UI
+import "./App.css";
 
 function App() {
   return (
- <HomePage/>
+    <NextUIProvider>
+      <HomePage />
+    </NextUIProvider>
   );
 }
-
 export default App;
