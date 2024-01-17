@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import org.hibernate.Length;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,9 @@ public class Product {
     @Column(name = "stock")
     private int stock;
 
+    @Column(name="product-img", length = 1000)
+    private String productImg;
+
     @OneToMany(mappedBy = "products")
     @JsonIgnoreProperties({"products"})
     @JsonIgnore
@@ -40,13 +44,14 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name, ProductType productType, double price, int stock, String productInfo) {
+    public Product(String name, ProductType productType, double price, int stock, String productInfo, String productImg) {
         this.name = name;
         this.productType = productType;
         this.price = price;
         this.stock = stock;
         this.productOrders = new ArrayList<>();
         this.productInfo = productInfo;
+        this.productImg = productImg;
     }
 
     public long getId() {
@@ -103,5 +108,13 @@ public class Product {
 
     public void setProductOrders(List<ProductOrder> productOrders) {
         this.productOrders = productOrders;
+    }
+
+    public String getProductImg() {
+        return productImg;
+    }
+
+    public void setProductImg(String productImg) {
+        this.productImg = productImg;
     }
 }
