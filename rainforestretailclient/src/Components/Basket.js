@@ -2,11 +2,9 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 const Basket = ({ basketItems, products, basket}) => {
 
-
   const productsWithQuantity = (basket) => {
     return (  
-        //function maps over hashmap, and returns products ID & Quantity from handleClickToBasket function
-        // idItem: item ID, quant: quantity
+        
     <ul>
         
         {Object.entries(basket).map(([idItem, quant], id) => (

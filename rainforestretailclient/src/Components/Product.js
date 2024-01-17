@@ -7,7 +7,6 @@ const Product = ({ product, handleClickToBasket, basket }) => {
 
   const [inStock, setInStock] = useState(true);
 
-  console.log(basket);
 
   // With basket
   useEffect(() => {
@@ -17,7 +16,6 @@ const Product = ({ product, handleClickToBasket, basket }) => {
       setInStock(true);
     }
   }, [basket[product.id]]);
-
 
   return (
     <article>

@@ -5,8 +5,6 @@ const BasketItem = ({item, products}) => {
     console.error(`Product with ID ${item} not found.`);
     return null; // Skip rendering this item if product not found
   }
-
-
     return (
       <>
       <ol>
