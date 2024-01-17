@@ -7,7 +7,7 @@ const CompletedOrder = ({order}) => {
     const eachOrder = order.productOrders.map((item) => (
         <li key={item.product.id}>Item: {item.product.name} | Quantity: {item.quantity}</li>));
 
-    console.log(order);
+    console.log(order.productOrders);
     return ( 
         <div>
         <h2>Order Complete! 🥳</h2>
