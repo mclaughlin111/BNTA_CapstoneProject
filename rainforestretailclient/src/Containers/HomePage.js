@@ -87,7 +87,9 @@ const HomePage = () => {
                 path: "/checkout",
                 element: <CheckoutForm
                 fetchEmail={fetchEmail}
-                createNewOrder={createNewOrder}/>
+                createNewOrder={createNewOrder}
+                fetchProducts={fetchProducts}
+                />
             },
             {
               path:"/",
