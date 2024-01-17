@@ -15,6 +15,9 @@ const HomePage = () => {
   const [order, setOrder] = useState({});
   
 
+
+  
+
   //FETCH Products
   const fetchProducts = async () => {
     const response = await fetch("http://localhost:8080/products");
@@ -36,8 +39,8 @@ const HomePage = () => {
       body: JSON.stringify(basket)
     })
     const order = await response.json();
-    console.log(order);
     setOrder(order);
+    
   }
   
 
