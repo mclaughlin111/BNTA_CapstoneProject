@@ -24,3 +24,7 @@ article {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.productImage {
+  max-width: 20vw;
+}

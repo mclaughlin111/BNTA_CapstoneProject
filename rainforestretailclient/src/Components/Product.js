@@ -17,8 +17,11 @@ const Product = ({ product, handleClickToBasket, basket }) => {
     }
   }, [basket[product.id]]);
 
+
+
   return (
     <article>
+      <img className="productImage" alt="product image" src={product.productImg}></img>
       <h4>{product.name}</h4>
       <h4>
         Price : <span>£</span>
