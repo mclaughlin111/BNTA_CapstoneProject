@@ -17,9 +17,7 @@ const Product = ({ product, handleClickToBasket, basket }) => {
     }
   }, [basket[product.id]]);
 
-  console.log(product);
 
-  console.log(product.productImg);
 
   return (
     <article>
