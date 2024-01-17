@@ -94,6 +94,7 @@ const HomePage = () => {
               element: <ProductList
               products={products}
               handleClickToBasket={handleClickToBasket}
+              basket={basket}
               />  
             },
             {
