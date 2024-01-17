@@ -13,7 +13,7 @@ const Home = () => {
                     
                 </ul>
             
-                <Outlet/>
+                {/* <Outlet/> */}
 
                   
             </nav>

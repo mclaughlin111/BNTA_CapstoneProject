@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -18,11 +18,13 @@ code {
     monospace;
 }
 
-.basketTotal {
+*/
+
+ .basketTotal {
   font-size: 50%;
   vertical-align: top;
   content: "+";
-}
+} 
 
 article {
   display: flex;
@@ -32,4 +34,4 @@ article {
 
 .productImage {
   max-width: 20vw;
-}
+} 

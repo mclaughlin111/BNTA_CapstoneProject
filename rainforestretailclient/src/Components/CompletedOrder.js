@@ -1,7 +1,9 @@
+import {Spinner} from "@nextui-org/react";
+
 const CompletedOrder = ({order}) => {
 
     if (!order || !order.productOrders || order.productOrders.length === 0) {
-        return <p>Loading...</p>;
+        return <Spinner />;
       }
 
     const eachOrder = order.productOrders.map((item) => (

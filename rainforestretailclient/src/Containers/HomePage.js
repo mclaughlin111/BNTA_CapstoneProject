@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from "../Components/Home";
 import CompletedOrder from "../Components/CompletedOrder";
-import {Spinner} from "@nextui-org/react";
+import Nav from "../Components/Nav";
+
 
 const HomePage = () => {
   const [products, setProducts] = useState([]); // state for products from backend
@@ -76,7 +77,7 @@ const HomePage = () => {
   const rainforestRoutes = createBrowserRouter([
     {
         path: "/",
-        element: <Home 
+        element: <Nav 
         />,
         children: [
             {
@@ -120,7 +121,6 @@ const HomePage = () => {
 
   return (
     <>
-    <Spinner />
       <RouterProvider router = {rainforestRoutes} />
 
     </>
