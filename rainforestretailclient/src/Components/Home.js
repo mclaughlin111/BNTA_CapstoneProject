@@ -1,9 +1,7 @@
 import {Link, Outlet} from "react-router-dom";
-import ProductList from "./ProductList";
+
 
 const Home = () => {
-
-
 
     return ( 
         <>
@@ -14,7 +12,6 @@ const Home = () => {
                     <li><Link to="/">Home</Link></li>
                     
                 </ul>
-
             
                 <Outlet/>
 

@@ -13,9 +13,7 @@ const HomePage = () => {
   const [loading, setLoading] = useState(true); // state for loading function
   const [user, setUser] = useState({});
   const [order, setOrder] = useState({});
-  
-
-
+  const [filteredProducts, setFilteredProducts]= useState([]);
   
 
   //FETCH Products
@@ -42,13 +40,18 @@ const HomePage = () => {
     setOrder(order);
     
   }
+
+  const fetchFilteredProducts = async(productType)=>{
+    const response = await fetch(`http://localhost:8080/products/filtered?productType=${productType}`)
+    const data = await response.json();
+    setProducts(data)
+  }
   
 
   //Function Adds User selected products to basket
   const handleClickToBasket = (product) => {
     setBasketItems((prevBasketItems) => {
       const newBasketItems = [...prevBasketItems, product];
-      // console.log(newBasketItems); // Updated basketItems
       return newBasketItems;
     });
 
@@ -56,12 +59,13 @@ const HomePage = () => {
     setBasket((prevBasket) => {
         const newBasket = { ...prevBasket };
         newBasket[product] = (newBasket[product] || 0) + 1;
-        console.log(newBasket); // Updated basket with product quantity
+       // Updated basket with product quantity
         return newBasket;
       });
 
   };
 
+ 
   
 
   useEffect(() => {
@@ -97,6 +101,8 @@ const HomePage = () => {
               products={products}
               handleClickToBasket={handleClickToBasket}
               basket={basket}
+              filteredProducts={filteredProducts}
+              fetchFilteredProducts={fetchFilteredProducts}
               />  
             },
             {
