@@ -2,9 +2,9 @@ import {Spinner} from "@nextui-org/react";
 
 const CompletedOrder = ({order}) => {
 
-    if (!order || !order.productOrders || order.productOrders.length === 0) {
-        return <Spinner />;
-      }
+    // if (!order || !order.productOrders || order.productOrders.length === 0) {
+    //     return <Spinner />;
+    //   }
 
     const eachOrder = order.productOrders.map((item) => (
         <li key={item.product.id}>Item: {item.product.name} | Quantity: {item.quantity}</li>));

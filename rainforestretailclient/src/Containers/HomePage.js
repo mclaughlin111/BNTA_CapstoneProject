@@ -3,7 +3,7 @@ import CheckoutForm from "../Components/CheckoutForm";
 import ProductList from "../Components/ProductList";
 import { useState, useEffect } from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Home from "../Components/Home";
+// import Home from "../Components/Home";
 import CompletedOrder from "../Components/CompletedOrder";
 import Nav from "../Components/Nav";
 
@@ -77,7 +77,8 @@ const HomePage = () => {
   const rainforestRoutes = createBrowserRouter([
     {
         path: "/",
-        element: <Nav 
+        element: <Nav
+        fetchFilteredProducts={fetchFilteredProducts} 
         />,
         children: [
             {

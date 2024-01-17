@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 const Product = ({ product, handleClickToBasket, basket }) => {
   const handleClickOnBasket = () => {
+    console.log(basket);
     handleClickToBasket(product.id);
   };
 
