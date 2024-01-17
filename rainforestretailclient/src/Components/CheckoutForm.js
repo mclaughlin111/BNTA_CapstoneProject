@@ -1,7 +1,7 @@
 import { useState } from "react"; 
 import { Link } from "react-router-dom";
 
-const CheckoutForm = ({fetchEmail, createNewOrder}) => {
+const CheckoutForm = ({fetchEmail, createNewOrder, fetchProducts}) => {
   //Function to handle checkout
   // const handleCheckOut = () => {
   //     return null;
@@ -23,6 +23,7 @@ const CheckoutForm = ({fetchEmail, createNewOrder}) => {
 
   const handleClick = (event) => {
     createNewOrder();
+    fetchProducts();
   }
 
 
