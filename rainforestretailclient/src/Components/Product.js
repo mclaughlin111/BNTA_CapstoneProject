@@ -30,7 +30,6 @@ const Product = ({ product, handleClickToBasket, basket }) => {
       <h4>Category : {product.productType}</h4>
       {/* when in stock true render button, if inStock is falsey  */}
       {inStock ? <button onClick={handleClickOnBasket}>Add to Basket</button> : <p> OUT OF STOCK!</p>}
-
     </article>
   );
 };
