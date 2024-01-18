@@ -31,3 +31,8 @@
     margin: 0px auto;
     gap: 10px
 }
+
+.carousel{
+    display: flex;
+    flex-wrap: wrap;
+}
