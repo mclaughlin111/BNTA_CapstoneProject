@@ -15,19 +15,17 @@ const Basket = ({ basketItems, products, basket}) => {
             </div>
           ))}
       </div>
-
-  /* <ul>
-  {Object.entries(basket).map(([idItem, quant], id) => (
-    <li className="eachItem" key={id}>
-      <img className="basketImage" alt="product image" src={products[idItem-1].productImg}></img> : {products[idItem-1].name} : {quant} 
-    </li>
-  ))}
-  </ul> */
-
       
     )
-  
   };
+
+  const basketSubTotal = (basket) => {
+    let runningTotal = 0
+    Object.entries(basket).map(([idItem, quant]) =>(
+      runningTotal += (products[idItem-1].price * quant)
+    ))
+    return runningTotal;
+  }
 
   const navigate = useNavigate();
 
@@ -49,7 +47,7 @@ const Basket = ({ basketItems, products, basket}) => {
           <p>{basketItems.length} Items</p>
         </div>
         <div className="subtotal">  
-          <p>Subtotal</p>
+          <p>Subtotal: £{basketSubTotal(basket)}</p>
         </div>
       </div>  
       <button className="checkoutButton" onClick={handleClick}>
