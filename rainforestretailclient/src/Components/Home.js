@@ -1,25 +1,28 @@
-import {Link, Outlet} from "react-router-dom";
-
+import { Link, Outlet } from "react-router-dom";
+import { FaCartShopping } from "react-icons/fa6";
+import "../Home.css";
 
 const Home = () => {
+  return (
+    <>
+      <nav className="navbar">
+        <ul className="navbarList">
+          <li>
+            <a>
+              <Link to="/">RainforestRetail<span className="titleIcon">🏕️</span></Link>
+            </a>
+          </li>
 
-    return ( 
-        <>
-            <nav>
-                <ul>
-                    <li><Link to= "/basket">Basket</Link> </li>
-                    <li><Link to= "/checkout">Checkout</Link></li>
-                    <li><Link to="/">Home</Link></li>
-                    
-                </ul>
-            
-                <Outlet/>
+          <li>
+         
+            <Link to="/basket"><FaCartShopping className="basketIcon"/></Link>
+            <a href="/checkout"className="checkout"><Link to="/checkout">Checkout</Link></a>
+          </li>
+        </ul>
+      </nav>
+      <Outlet />
+    </>
+  );
+};
 
-                  
-            </nav>
-        </>
-
-     );
-}
- 
 export default Home;

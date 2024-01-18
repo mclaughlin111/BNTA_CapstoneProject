@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import "../Product.css"
+
 
 const Product = ({ product, handleClickToBasket, basket }) => {
   const handleClickOnBasket = () => {
@@ -20,17 +22,17 @@ const Product = ({ product, handleClickToBasket, basket }) => {
 
 
   return (
-    <article>
-      <img className="productImage" alt="product image" src={product.productImg}></img>
-      <h4>{product.name}</h4>
-      <h4>
+    <article className="Product">
+      <img className="productImage" alt="product" src={product.productImg}></img>
+      <h4 id="productName">{product.name}</h4>
+      <h4 id="price">
         Price : <span>£</span>
         {product.price}
       </h4>
-      <h4>Description : {product.productInfo}</h4>
-      <h4>Category : {product.productType}</h4>
+      <h4 id="description">Description : {product.productInfo}</h4>
+      <h4 id="category">Category : {product.productType}</h4>
       {/* when in stock true render button, if inStock is falsey  */}
-      {inStock ? <button onClick={handleClickOnBasket}>Add to Basket</button> : <p> OUT OF STOCK!</p>}
+      {inStock ? <button onClick={handleClickOnBasket}>Add to Basket</button> : <p id="outOfStock"> OUT OF STOCK!</p>}
     </article>
   );
 };

@@ -1,11 +1,27 @@
+/* SCHEME */
+.first-color {
+  background: #515661;
+}
+  .second-color {
+  background: #2E9F82;
+  }
+  .third-color {
+  background: #68C170;
+  }
+  .fourth-color {
+  background: #D6EC8C; 
+  }
+
+  
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 1em;
+  -moz-osx-font-smoothing: grayscale; 
+  background-color:#D6EC8C ;
 }
 
 code {
@@ -25,6 +41,3 @@ article {
   flex-wrap: wrap;
 }
 
-.productImage {
-  max-width: 20vw;
-}

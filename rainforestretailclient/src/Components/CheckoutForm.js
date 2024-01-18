@@ -1,5 +1,8 @@
 import { useState } from "react"; 
 import { Link } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
+import "../CheckoutForm.css"
+
 
 const CheckoutForm = ({fetchEmail, createNewOrder, fetchProducts}) => {
  
@@ -17,14 +20,17 @@ const CheckoutForm = ({fetchEmail, createNewOrder, fetchProducts}) => {
     setStateEmail("");
   }
 
+  const navigate = useNavigate();
+
   const handleClick = (event) => {
     createNewOrder();
     fetchProducts();
+    navigate("/completed-order")
   }
 
   return (
-    <>
-      <h1>Checkout</h1>
+    <section id ="container">
+      <h1 id = "checkout-title">Checkout</h1>
       <form id="checkoutForm" onSubmit={handleFormSubmit}>
         <label>Customer Email Address:</label>
         <input
@@ -35,11 +41,11 @@ const CheckoutForm = ({fetchEmail, createNewOrder, fetchProducts}) => {
           value={stateEmail}
           onChange={handleEmailChange}
         />
-        <input type="submit" value="Submit"/>   
+        <input type="submit" value="Submit" id="submit-button"/>   
       </form>
 
-      <Link to="/completed-order"><button onClick={handleClick}>Buy Now</button></Link>
-    </>
+<button onClick={handleClick} id ="buy-now-button">Buy Now</button>
+    </section>
   );
 };
 
