@@ -10,8 +10,8 @@ const Basket = ({ basketItems, products, basket}) => {
           {Object.entries(basket).map(([idItem, quant], id) => (
             <div className="eachItem" key={id}>
               <img className="basketImage" alt="product image" src={products[idItem-1].productImg}></img>
-              <span>{products[idItem-1].name}</span> 
-              <span>{quant}</span> 
+              <span className="productName">{products[idItem-1].name}</span> 
+              <span className="quantity">{quant}</span> 
             </div>
           ))}
       </div>
@@ -38,16 +38,24 @@ const Basket = ({ basketItems, products, basket}) => {
   return (
     
     <div className="basketContainer">
-      <h2>
+      <h2 className="basketHeader">
         Basket
-        <span className="basketTotal">{basketItems.length}</span>
       </h2>
       <div className="basketItems">
         {productsWithQuantity(basket)}
+      </div>
+      <div className="basketTotal"> 
+        <div className="totalItems"> 
+          <p>{basketItems.length} Items</p>
+        </div>
+        <div className="subtotal">  
+          <p>Subtotal</p>
+        </div>
       </div>  
       <button className="checkoutButton" onClick={handleClick}>
         Go To Checkout
       </button>
+      
     </div>  
     
   );

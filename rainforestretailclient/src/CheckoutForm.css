@@ -1,59 +1,83 @@
-#checkoutForm{
+
+
+  #container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center;
-    height: 5vh;
     align-items: center;
+    border: 3px solid #2E9F82;
+    margin-right: 300px;
+    margin-left: 300px;
+    padding: 40px;
+    text-align: center; 
+    background-color: #eaf1d2;
+    color: #515661;
+    margin-top: 250px;
+    
 }
 
-
-#checkout-title{
+#checkout-title {
     font-weight: bold;
-    align-items: center;
-    padding-bottom: 300px;
+    margin-bottom: 20px; 
+    color: #515661;
+}
+
+#checkoutForm {
     display: flex;
     flex-direction: column;
-
-}
-
-#buy-now-button{
-    justify-content: center;
-    height: 5vh;
     align-items: center;
-    display: flex;
+    width: 50%; 
+
 }
 
-#container{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    border:2px solid #2E9F82;
-    margin-right: 20px;
-    margin-left:20px ;
-    padding: 50px;
+#customer-email-address-title {
+    font-weight: bold;
+    margin-bottom: 10px; 
+    color: #515661;
+    margin-bottom: 20px;
+    
 }
 
-#submit-button{
+#customer-email-address {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px; 
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #2E9F82; 
+    border-radius: 4px; 
+    background-color: #2E9F82; 
+    color: #fff; 
+    font-size: 16px; 
+}
+
+#customer-email-address::placeholder {
+    color: #fff; 
+    font-style: normal;
+}
+
+#submit-button {
     background-color: #2E9F82;
     color: #fff;
     border: none;
-    /* padding: 10px 20px; */
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-#customer-email-address{
-    color: #2E9F82;
-}
-
-#customer-email-address-title{
+    padding: 10px 20px;
+    margin-top: 40px;
     font-weight: bold;
 }
-#customer-email-address::placeholder {
-    color: #2E9F82; 
-   font-style: normal;
-  }
+
+#buy-now-button {
+    background-color: #2E9F82;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 40px;
+    font-weight: bold;
+}

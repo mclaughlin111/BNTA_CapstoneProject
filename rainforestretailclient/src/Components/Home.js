@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-// import { FaCartShopping } from "react-icons/fa6";
+import { FaCartShopping } from "react-icons/fa6";
 import "../Home.css";
 
 const Home = () => {
@@ -8,15 +8,15 @@ const Home = () => {
       <nav className="navbar">
         <ul className="navbarList">
           <li>
-            <h1>
-              <Link to="/">Home</Link>
-            </h1>
+            <a>
+              <Link to="/">RainforestRetail<span className="titleIcon">🏕️</span></Link>
+            </a>
           </li>
 
           <li>
-          {/* <FaCartShopping /> */}
-            <h2><Link to="/basket">Basket<span></span></Link>
-            <Link to="/checkout">Checkout</Link></h2>
+         
+            <Link to="/basket"><FaCartShopping className="basketIcon"/></Link>
+            <a href="/checkout"className="checkout"><Link to="/checkout">Checkout</Link></a>
           </li>
         </ul>
       </nav>
