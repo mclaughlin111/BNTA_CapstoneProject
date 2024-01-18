@@ -32,7 +32,7 @@ const CheckoutForm = ({fetchEmail, createNewOrder, fetchProducts}) => {
     <section id ="container">
       <h1 id = "checkout-title">Checkout</h1>
       <form id="checkoutForm" onSubmit={handleFormSubmit}>
-        <label>Customer Email Address:</label>
+        <label id = "customer-email-address-title">Customer Email Address:</label>
         <input
           id="customer-email-address"
           name="Email Address"
