@@ -22,7 +22,7 @@ const Nav = ({ fetchFilteredProducts}) => {
 
   return (
     <>
-      <Navbar isBordered="true" shouldHideOnScroll="true">
+      <Navbar isBordered="true" >
         <NavbarBrand>
           <Link color="foreground" href="/">
             <p className="">🌳Rainforest Retail</p>
