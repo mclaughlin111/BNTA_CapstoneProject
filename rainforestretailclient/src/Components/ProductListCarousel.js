@@ -11,8 +11,8 @@ for (let i = 0; i < products.length; i += 3) {
   groupedProducts.push(products.slice(i, i + 3));
 }
 
-const carouselItemsGrouped = groupedProducts.map((productGroup, i) => (
-  <div key={i} className="carousel-item">
+const carouselItems = groupedProducts.map((productGroup, i) => (
+  <div key={i} className="carouselItem">
     {productGroup.map((product) => (
       <Product
         key={product.id}
@@ -40,12 +40,14 @@ const carouselItemsGrouped = groupedProducts.map((productGroup, i) => (
   return (
     <>
     <div className="productListCarousel">
-    <Carousel className="carousel">
-      {/* {productData.map((product, i) => (
-        <div key={i}>{carouselItemsGrouped}</div>
-      ))} */}
-      <div className="carouselItem"></div>
-        {carouselItemsGrouped}
+    <Carousel
+    indicators={true}
+    navButtonsAlwaysVisible={true}
+    animation="fade"
+    timeout={1000}
+    >
+        {carouselItems}
+       
     </Carousel>
   </div>
   <div className="productList">{productData}</div>;
@@ -54,3 +56,9 @@ const carouselItemsGrouped = groupedProducts.map((productGroup, i) => (
 };
 
 export default ProductListCarousel;
+
+
+   {/* {productData.map((product, i) => (
+        <div key={i}>{product}</div>
+      ))} */}
+      {/* <div className="carouselItem"> {carouselItems}</div> */}

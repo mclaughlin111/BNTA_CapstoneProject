@@ -14,7 +14,6 @@
 #categoryText {
     display: block;
 }
-
 /* Responsive breakpoint */
 @media (max-width: 600px) {
     .productList {
@@ -23,23 +22,19 @@
         align-items: center;
     }
 }
+/* style for carousel */
 
 .productListCarousel {
-    width: 100%;
-    text-align: center;
+    width: 90vw;
     padding: 20px;
     margin: 0px auto;
-    gap: 10px
-}
-
-.carousel{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-    .carouselItem {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 10px; /* Adjust as needed */
-    }
+    gap: 10px;
+  }
   
+  .carouselItem {
+    display: flex ;
+  flex-direction: row ; /* Explicitly set it to row */
+  justify-content: space-between; 
+  gap: 10px;
+  /* max-height: 20vh; */
+  }

@@ -23,7 +23,7 @@ const Home = ({ fetchFilteredProducts, products, fetchProducts }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const scrollThreshold = 70; // Adjust this value as needed
+      const scrollThreshold = 20; // Adjust this value as needed
 
       // Check if the user has scrolled below the defined distance
       setScroll(scrollY > scrollThreshold);
