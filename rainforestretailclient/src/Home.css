@@ -72,3 +72,14 @@
         
     }
 }
+
+.allProductsButton {
+    font-family: 'Acme', sans-serif;
+    background: none;
+    color: black;
+  }
+
+.allProductsButton:hover  {
+    text-decoration: underline;
+    background-color: #D6EC8C;
+}
