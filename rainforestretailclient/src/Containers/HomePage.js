@@ -74,7 +74,10 @@ const HomePage = () => {
   const rainforestRoutes = createBrowserRouter([
     {
       path: "/",
-      element: <Home fetchFilteredProducts={fetchFilteredProducts} />,
+      element: <Home 
+      fetchFilteredProducts={fetchFilteredProducts}
+      products={products}
+      fetchProducts={fetchProducts} />,
       children: [
         {
           path: "/basket",
