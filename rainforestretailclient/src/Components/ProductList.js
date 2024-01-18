@@ -13,6 +13,7 @@ const ProductList = ({products, handleClickToBasket, basket,  fetchFilteredProdu
         const value = event.target.value
         fetchFilteredProducts(value);
         setCategoryState(value)
+        
     }
    
     return (

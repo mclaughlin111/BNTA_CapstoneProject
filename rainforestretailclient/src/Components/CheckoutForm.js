@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"; 
-import { Link } from "react-router-dom";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../CheckoutForm.css"
 
 
@@ -39,26 +38,6 @@ const CheckoutForm = ({fetchEmail, createNewOrder, fetchProducts, basketItems, b
     navigate("/completed-order");
   };
   
-
-//   return (
-//     <section id ="container">
-//       <h1 id = "checkout-title">Checkout</h1>
-//       <form id="checkoutForm" onSubmit={handleFormSubmit}>
-//         <label id = "customer-email-address-title">Customer Email Address:</label>
-//         <input
-//           id="customer-email-address"
-//           name="Email Address"
-//           type="email"
-//           placeholder="enter email"
-//           value={stateEmail}
-//           onChange={handleEmailChange}
-//         />
-//         <input type="submit" value="Submit" id="submit-button"/>   
-//       </form>
-
-// {itemsInBasket ? <button onClick={handleClick} id ="buy-now-button">Buy Now</button>: <p> Your basket is empty. You will need to add products to buy</p>}
-//     </section>
-//   );
 return (
   <section id="container">
     {itemsInBasket ? (
