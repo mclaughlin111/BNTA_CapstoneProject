@@ -49,7 +49,7 @@ const Basket = ({ basketItems, products, basket}) => {
         <div className="subtotal">  
           <p>Subtotal: £{basketSubTotal(basket)}</p>
         </div>
-      </div>  
+    </div>  
       <button className="checkoutButton" onClick={handleClick}>
         Go To Checkout
       </button>
