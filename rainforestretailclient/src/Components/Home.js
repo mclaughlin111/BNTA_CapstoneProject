@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import { FaCartShopping } from "react-icons/fa6";
+import { FaShoppingBasket } from "react-icons/fa";
 import "../Home.css";
 
 const Home = () => {
@@ -20,7 +20,7 @@ const Home = () => {
 
           <li>
             <Link to="/basket">
-              <FaCartShopping className="basketIcon" />
+              <FaShoppingBasket className="basketIcon" />
             </Link>
             <a href="/checkout" className="checkout">
               <Link to="/checkout">Checkout</Link>
