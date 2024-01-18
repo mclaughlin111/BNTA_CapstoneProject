@@ -1,6 +1,6 @@
 ![Capstone Ecommerce Marketplace Class Diagram (1)](https://github.com/mclaughlin111/BNTA_CapstoneProject/assets/47330113/1a86edd6-6ff3-4cac-8577-8d44a76f05a5)
 ![Website wireframe (1)](https://github.com/mclaughlin111/BNTA_CapstoneProject/assets/47330113/77a368cf-c483-4552-92f7-e07f73e33f08)
-[EndPoints]![Screenshot 2024-01-18 at 16 44 55](https://github.com/mclaughlin111/BNTA_CapstoneProject/assets/145545660/a1aef76d-c1ce-4830-ad06-b7c69ff32a2c)
+EndPoints![Screenshot 2024-01-18 at 16 44 55](https://github.com/mclaughlin111/BNTA_CapstoneProject/assets/145545660/a1aef76d-c1ce-4830-ad06-b7c69ff32a2c)
 
 
 
