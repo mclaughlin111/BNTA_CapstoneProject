@@ -1,7 +1,17 @@
 import { Navigate, useNavigate } from "react-router-dom";
 import '../Basket.css'
+import { useEffect, useState } from "react";
 
 const Basket = ({ basketItems, products, basket}) => {
+
+  const[cart , setCart]=useState(true)
+
+  useEffect(()=>{
+    if(basketItems.length === 0 ){
+      setCart(false)
+    } else setCart(true)
+  },[basketItems.length])
+  
 
   const productsWithQuantity = (basket) => {
     return (  
@@ -11,7 +21,7 @@ const Basket = ({ basketItems, products, basket}) => {
             <div className="eachItem" key={id}>
               <img className="basketImage" alt="product image" src={products[idItem-1].productImg}></img>
               <span className="productName">{products[idItem-1].name}</span> 
-              <span className="quantity">{quant}</span> 
+              <span className="quantity">{quant}</span>
             </div>
           ))}
       </div>
@@ -44,7 +54,7 @@ const Basket = ({ basketItems, products, basket}) => {
       </div>
       <div className="basketTotal"> 
         <div className="totalItems"> 
-          <p>{basketItems.length} Items</p>
+          {cart &&<p>{basketItems.length} Items</p>}
         </div>
         <div className="subtotal">  
           <p>Subtotal: £{basketSubTotal(basket)}</p>
