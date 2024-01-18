@@ -17,8 +17,8 @@ const ProductList = ({products, handleClickToBasket, basket,  fetchFilteredProdu
    
     return (
         <div className="productList">
-         <h2>List Of Products</h2>
-         <label htmlFor="category">Search by Category</label>
+         <h2 id="title">List Of Products</h2>
+         <label htmlFor="category" id="categoryText">Search by category:</label>
 
             <select
             id="category"
