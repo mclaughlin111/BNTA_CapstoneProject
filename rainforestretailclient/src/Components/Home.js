@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import { FaShoppingBasket } from "react-icons/fa";
 import "../Home.css";
 
-const Home = ({ fetchFilteredProducts }) => {
+const Home = ({ fetchFilteredProducts, products, fetchProducts }) => {
   const [categoryState, setCategoryState] = useState(null);
   const [scroll, setScroll] = useState(false);
 
@@ -12,6 +12,11 @@ const Home = ({ fetchFilteredProducts }) => {
     fetchFilteredProducts(value);
     setCategoryState(value);
   };
+
+  const handleClick = (event) => {
+    fetchProducts();
+  }
+
 
   // function to amend styling on page scroll 
 
@@ -70,6 +75,8 @@ const Home = ({ fetchFilteredProducts }) => {
             <option value="SUSTAINABILITY">SUSTAINABILITY</option>
           </select>
           </li>
+
+          <button onClick={handleClick} className="allProductsButton">View All Products</button>
 
           <li>
             <Link to="/basket">
