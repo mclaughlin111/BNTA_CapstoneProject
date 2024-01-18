@@ -93,6 +93,8 @@ const HomePage = () => {
                 fetchEmail={fetchEmail}
                 createNewOrder={createNewOrder}
                 fetchProducts={fetchProducts}
+                basketItems={basketItems}
+                basket={basket}
                 />
             },
             {
