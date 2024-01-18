@@ -1,6 +1,6 @@
 import Product from "./Product";
 import Carousel from "react-material-ui-carousel";
-import { Paper, Button } from "@mui/material";
+
 import "../ProductList.css";
 
 const ProductListCarousel = ({ products, handleClickToBasket, basket }) => {
@@ -44,6 +44,7 @@ const carouselItemsGrouped = groupedProducts.map((productGroup, i) => (
       {/* {productData.map((product, i) => (
         <div key={i}>{carouselItemsGrouped}</div>
       ))} */}
+      <div className="carouselItem"></div>
         {carouselItemsGrouped}
     </Carousel>
   </div>

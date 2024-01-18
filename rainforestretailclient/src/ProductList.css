@@ -36,3 +36,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+    .carouselItem {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px; /* Adjust as needed */
+    }
+  
