@@ -18,13 +18,16 @@ const ProductListCarousel = ({ products, handleClickToBasket, basket }) => {
   console.log(productData);
 
   return (
-    <div className="productList">
-    <Carousel>
+    <>
+    <div className="productListCarousel">
+    <Carousel className="carousel">
       {productData.map((product, i) => (
         <div key={i}>{product}</div>
       ))}
     </Carousel>
   </div>
+  <div className="productList">{productData}</div>;
+  </>
 );
 };
 

@@ -23,3 +23,11 @@
         align-items: center;
     }
 }
+
+.productListCarousel {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin: 0px auto;
+    gap: 10px
+}
