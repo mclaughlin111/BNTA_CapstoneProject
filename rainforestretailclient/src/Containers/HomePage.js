@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../Components/Home";
 import CompletedOrder from "../Components/CompletedOrder";
+import ProductListCarousel from "../Components/ProductListCarousel";
+
 
 const HomePage = () => {
   const [products, setProducts] = useState([]); // state for products from backend
@@ -101,7 +103,7 @@ const HomePage = () => {
         {
           path: "/",
           element: (
-            <ProductList
+            <ProductListCarousel
               products={products}
               handleClickToBasket={handleClickToBasket}
               basket={basket}
