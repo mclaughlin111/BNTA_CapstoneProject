@@ -95,6 +95,8 @@ const HomePage = () => {
               fetchProducts={fetchProducts}
               basketItems={basketItems}
               basket={basket}
+              setBasket={setBasket}
+              setBasketItems={setBasketItems}
             />
           ),
         },

@@ -3,10 +3,11 @@ import { useNavigate } from "react-router-dom";
 import "../CheckoutForm.css"
 
 
-const CheckoutForm = ({fetchEmail, createNewOrder, fetchProducts, basketItems, basket}) => {
+const CheckoutForm = ({fetchEmail, createNewOrder, fetchProducts, basketItems, basket, setBasket, setBasketItems}) => {
  
   const[stateEmail, setStateEmail] = useState("")
   const[itemsInBasket, setItemsInBasket]=useState(false)
+
 
   const handleEmailChange = (event) => {
     let value = event.target.value;
@@ -36,7 +37,12 @@ const CheckoutForm = ({fetchEmail, createNewOrder, fetchProducts, basketItems, b
     createNewOrder();
     fetchProducts();
     navigate("/completed-order");
+    setBasket({})
+    setBasketItems([])
+  
   };
+
+  
   
 return (
   <section id="container">
