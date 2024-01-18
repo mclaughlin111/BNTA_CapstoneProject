@@ -1,0 +1,59 @@
+#checkoutForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 5vh;
+    align-items: center;
+}
+
+
+#checkout-title{
+    font-weight: bold;
+    align-items: center;
+    padding-bottom: 300px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#buy-now-button{
+    justify-content: center;
+    height: 5vh;
+    align-items: center;
+    display: flex;
+}
+
+#container{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border:2px solid #2E9F82;
+    margin-right: 20px;
+    margin-left:20px ;
+    padding: 50px;
+}
+
+#submit-button{
+    background-color: #2E9F82;
+    color: #fff;
+    border: none;
+    /* padding: 10px 20px; */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#customer-email-address{
+    color: #2E9F82;
+}
+
+#customer-email-address-title{
+    font-weight: bold;
+}
+#customer-email-address::placeholder {
+    color: #2E9F82; 
+   font-style: normal;
+  }
