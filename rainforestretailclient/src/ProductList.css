@@ -1,7 +1,10 @@
 .productList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Use 'repeat' instead of the comma */
     text-align: center;
     padding: 20px;
     margin: 0px auto;
+    gap: 10px
 }
 
 #title {
@@ -10,4 +13,13 @@
 
 #categoryText {
     display: block;
+}
+
+/* Responsive breakpoint */
+@media (max-width: 600px) {
+    .productList {
+        display: flex;
+        flex-direction: column; /* Change to column layout for smaller screens */
+        align-items: center;
+    }
 }

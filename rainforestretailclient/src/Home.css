@@ -20,6 +20,7 @@
     margin-right: 1em;
     padding: 0.5em;
     border-radius: 25px;
+    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3);
 }
 
 .navbar a  {

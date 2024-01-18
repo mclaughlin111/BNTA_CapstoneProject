@@ -1,4 +1,6 @@
 import Product from "./Product";
+import "../ProductList.css";
+
 const ProductList = ({ products, handleClickToBasket, basket }) => {
   const productData = products.map((product) => {
     return (
