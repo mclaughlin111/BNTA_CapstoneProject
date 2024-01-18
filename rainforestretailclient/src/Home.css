@@ -9,14 +9,18 @@
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
-    /* Remove underline */
     color: black;
+    font-family: 'Acme', sans-serif;
 }
 
 .navbar a  {
-    text-decoration: none; /* Remove text decoration for all links */
-    color: inherit; /* Inherit color from parent (black in this case) */
+    text-decoration: none; /* Remove text decoration fo links */
+    color: inherit;
     font-size: 1.5em;
+}
+
+.navbar a:hover  {
+    text-decoration: underline;
 }
 
 .navbarList {
@@ -38,8 +42,10 @@
 }
 
 .basketIcon {
-    scale: 1.3;
+    scale: 1.2;
 }
-.titleIcon {
 
+.titleIcon {
+    text-decoration: none !important;
+    font-size: 2em;
 }

@@ -24,6 +24,8 @@
   #productName {
     font-size: 25px;
     margin: 10px 0;
+    font-family: 'Acme', sans-serif;
+    font-weight: lighter;
   }
   
   #price {
