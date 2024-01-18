@@ -8,9 +8,11 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 3px solid #2E9F82;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #eaf1d2;
+    color: #515661;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -55,6 +57,21 @@
     display: flex;
     justify-content: space-between; 
     margin-top: 10px; 
-    padding-left: 5vw;
-    padding-right: 5vw;
+    
+    
+    
+  }
+
+  .totalItems {
+    text-align: right;
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .subtotal {
+    text-align: right;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: bold;
   }
