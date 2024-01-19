@@ -33,6 +33,10 @@
 - Allow Filtering by Delivery Time
 - Integrate [STRIPE demo payment component](https://stripe.com/docs/stripe-js/react?locale=en-GB)
 
+***Controllers (Users, Product , Orders)***
+
+![Screenshot 2024-01-19 at 09 50 00](https://github.com/mclaughlin111/BNTA_CapstoneProject/assets/145545660/e583a649-4576-48c9-b98c-ccfbe2ebcd5f)
+
 **Delivery Extensions**
 
 - Customer can select items for priority delivery
