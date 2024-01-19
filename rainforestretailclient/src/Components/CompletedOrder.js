@@ -1,3 +1,5 @@
+import '../OrderComplete.css'
+
 const CompletedOrder = ({order}) => {
 
     if (!order || !order.productOrders || order.productOrders.length === 0) {
@@ -9,11 +11,11 @@ const CompletedOrder = ({order}) => {
 
     console.log(order.productOrders);
     return ( 
-        <div>
-        <h2>Order Complete! 🥳</h2>
-        <p>Order ID: {order.id}</p>
-        <p>You ordered this at: {order.timeStamp}</p>  
-        <ul>{eachOrder}</ul>
+        <div className='completedOrderContainer'>
+            <h2 className='completedOrderHeader'>Order Complete! 🥳</h2>
+            <p>Order ID: {order.id}</p>
+            <p>You ordered this at: {order.timeStamp}</p>  
+            <ul>{eachOrder}</ul>
         </div>
      );
 }
