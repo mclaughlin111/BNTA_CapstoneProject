@@ -45,6 +45,8 @@ const HomePage = () => {
     setOrder(order);
   };
 
+  console.log(basket);
+
   const fetchFilteredProducts = async (productType) => {
     const response = await fetch(
       `http://localhost:8080/products/filtered?productType=${productType}`
@@ -130,5 +132,7 @@ const HomePage = () => {
     </>
   );
 };
+
+
 
 export default HomePage;

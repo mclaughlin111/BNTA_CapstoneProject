@@ -9,7 +9,6 @@ const CompletedOrder = ({order}) => {
     const eachOrder = order.productOrders.map((item) => (
         <li key={item.product.id}>Item: {item.product.name} | Quantity: {item.quantity}</li>));
 
-    console.log(order.productOrders);
     return ( 
         <div className='completedOrderContainer'>
             <h2 className='completedOrderHeader'>Order Complete! 🥳</h2>

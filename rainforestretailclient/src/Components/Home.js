@@ -15,23 +15,18 @@ const Home = ({ fetchFilteredProducts, products, fetchProducts }) => {
 
   const handleClick = (event) => {
     fetchProducts();
-  }
+  };
 
-
-  // function to amend styling on page scroll 
-
+  // function to amend styling on page scroll
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const scrollThreshold = 20; // Adjust this value as needed
-
       // Check if the user has scrolled below the defined distance
       setScroll(scrollY > scrollThreshold);
     };
-
     // Attach the scroll event listener when the component mounts
     window.addEventListener("scroll", handleScroll);
-
     // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -40,7 +35,7 @@ const Home = ({ fetchFilteredProducts, products, fetchProducts }) => {
 
   return (
     <>
-      <nav className={`navbar ${scroll ? 'scrolled' : ''}`}>
+      <nav className={`navbar ${scroll ? "scrolled" : ""}`}>
         <ul className="navbarList">
           <li>
             <a>
@@ -52,31 +47,33 @@ const Home = ({ fetchFilteredProducts, products, fetchProducts }) => {
           </li>
 
           <li>
-          {/* filter by category */}
-          <label htmlFor="category" id="categoryText">
-            Search by category:
-          </label>
+            {/* filter by category */}
+            <label htmlFor="category" id="categoryText">
+              Search by category:
+            </label>
 
-          <select
-            id="category"
-            name="category"
-            defaultValue={"Choose a category"}
-            value={categoryState}
-            onChange={handleChange}
-          >
-            <option disabled value="Choose a category">
-              Choose a category
-            </option>
-            <option value="HOMEGOODS">HOMEGOODS</option>
-            <option value="ENTERTAINMENT">ENTERTAINMENT</option>
-            <option value="ELECTRONICS">ELECTRONICS</option>
-            <option value="BEAUTY">BEAUTY</option>
-            <option value="HOBBIES">HOBBIES</option>
-            <option value="SUSTAINABILITY">SUSTAINABILITY</option>
-          </select>
+            <select
+              id="category"
+              name="category"
+              defaultValue={"Choose a category"}
+              value={categoryState}
+              onChange={handleChange}
+            >
+              <option disabled value="Choose a category">
+                Choose a category
+              </option>
+              <option value="HOMEGOODS">HOMEGOODS</option>
+              <option value="ENTERTAINMENT">ENTERTAINMENT</option>
+              <option value="ELECTRONICS">ELECTRONICS</option>
+              <option value="BEAUTY">BEAUTY</option>
+              <option value="HOBBIES">HOBBIES</option>
+              <option value="SUSTAINABILITY">SUSTAINABILITY</option>
+            </select>
           </li>
 
-          <button onClick={handleClick} className="allProductsButton">View All Products</button>
+          <button onClick={handleClick} className="allProductsButton">
+            View All Products
+          </button>
 
           <li>
             <Link to="/basket">

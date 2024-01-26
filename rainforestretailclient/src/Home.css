@@ -20,7 +20,6 @@
     background: rgba(255, 255, 255, 0.47);
     backdrop-filter: blur(15px);
     top: 1em;
-
     margin-left: 3em;
     margin-right: 3em;
     padding: 1.5em;
@@ -66,7 +65,7 @@
 }
 
 /* responsive breakpoint */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .navbar {
         flex-direction: column;
     }

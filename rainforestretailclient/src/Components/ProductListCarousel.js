@@ -35,7 +35,6 @@ const carouselItems = groupedProducts.map((productGroup, i) => (
     );
   });
 
-  console.log(productData);
 
   return (
     <>
@@ -58,7 +57,3 @@ const carouselItems = groupedProducts.map((productGroup, i) => (
 export default ProductListCarousel;
 
 
-   {/* {productData.map((product, i) => (
-        <div key={i}>{product}</div>
-      ))} */}
-      {/* <div className="carouselItem"> {carouselItems}</div> */}
